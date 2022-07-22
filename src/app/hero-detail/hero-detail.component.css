@@ -1,0 +1,35 @@
+.none{
+  display: none;
+}
+body {
+  margin: 0;
+
+}
+.padd{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  padding-top: 65px;
+
+}
+.text{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 1.2em;
+}
+.section {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  width: 320px;
+  margin: 50px auto;
+  scroll-snap-type: x mandatory;
+}
+
+.section_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 300px;
+  height: 400px;
+  scroll-snap-align: start;
+}

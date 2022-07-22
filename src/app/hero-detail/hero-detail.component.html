@@ -1,0 +1,35 @@
+<div *ngIf="hero" class="padd">
+  <div class="section">
+    <div class="section_item item1">
+    <img src="{{hero.img [0]}}" alt="photo">
+  </div>
+    <div class="section_item item2">
+    <img src="{{hero.img[1]}}" alt="photo">
+  </div>
+  </div>
+ <div class="text">
+  <p>{{hero.name | uppercase}}</p>
+   <p> Розмір
+     <br>
+     {{hero.size}}</p>
+   <p>
+     {{hero.content }}
+   </p>
+ </div>
+   <div class="none">
+    <label for="hero-name">Hero name:</label>
+    <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+    <button type="button" (click)="goBack()" >go back</button>
+    <button type="button" (click)="save()">save</button>
+  </div>
+</div>
+<div class="bars">
+  <div *ngIf="hasVerticalBar" class="bar">
+    <div
+      class="thumb"
+      [class.thumb_active]="verticalThumbActive"
+      [style.height.%]="verticalView"
+      [style.top.%]="verticalThumb"
+    ></div>
+  </div>
+</div>
